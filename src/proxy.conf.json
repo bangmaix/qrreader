@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "http://bukittinggi.cloudns.cl",
+        "secure": false
+    }
+}

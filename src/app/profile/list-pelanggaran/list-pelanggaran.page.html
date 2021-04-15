@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Riwayat Pelanggaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h2 style="text-align: center;">Riwayat Pelanggaran</h2>
+
+  <div class="container" *ngIf="list_pelanggaran">
+    
+    <ul>
+      <li *ngFor="let item of list_pelanggaran" style="background-color: #ffc409;">
+        <span></span>
+        <div class="date">{{item.created_at | date:'d MMM Y'}}</div>
+        <div class="info">{{item.jenis_pelanggaran_jenis_pelanggaran}}</div>
+       
+        <div class="time">
+          <span>{{item.created_at | date:'h:mm'}}</span>
+          <span></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</ion-content>

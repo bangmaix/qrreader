@@ -5,6 +5,7 @@
 export const environment = {
   api_url: "https://cors-any-sakti.herokuapp.com/http://bukittinggi.cloudns.cl/api",
   secret_key: "dbc961674a61302d17aa98c50fc23fdc",
+  api_mobile:"http://bukittinggi.cloudns.cl/api",
   production: false
 };
 

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Biodata</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="card" *ngIf="!isLoading">
+    <div class="header">
+      <div class="avatar">
+        <img *ngIf="data_profile.photo" src="{{data_profile.photo}}" alt="" style="width: 150px; height: 150px;">
+        <img *ngIf="data_profile.photo == null" src="assets/user.jpg" alt=""> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="card-body" *ngIf="!isLoading" style="margin-top: 20px;">
+  
+    <div class="box org">
+      <div class="ion-text-center">
+        <p class="info">{{data_profile.nama}}</p>
+        <p class="info">{{data_profile.nik}}</p>
+      </div>
+    </div>
+
+    <div class="box pob">
+      <p class="labelicon">Alamat</p>
+      <p class="info">{{data_profile.kab_kota}}, {{data_profile.kecamatan}}, {{data_profile.kel_desa}}, RT
+        {{data_profile.rt}} / RW
+        {{data_profile.rw}}</p>
+    </div>
+
+    <div class="box pob">
+      <p class="labelicon">Identifikasi Kartu</p>
+      <p class="info">{{data_profile.kategori_kategori}} - {{data_profile.kelompok_kelompok}}</p>
+    </div>
+
+    <div class="box email">
+      <p class="labelicon">Jam Operasional</p>
+      <p class="info">
+        {{data_profile.waktu_operasional_waktu_operasional}}
+      </p>
+    </div>
+
+    <div class="box email">
+      <p class="labelicon">Lokasi Operasional</p>
+      <p class="info">
+        {{data_profile.lokasi_lokasi}}
+      </p>
+    </div>
+
+    <div class="box org">
+      <p class="labelicon">Nomor Handphone</p>
+      <p class="info">{{data_profile.no_hp}}</p>
+    </div>
+
+   
+  
+   
+  
+  </div>
+
+
+</ion-content>

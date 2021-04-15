@@ -1,0 +1,82 @@
+
+ion-content {
+    --background: url(../../../assets/bukittinggi.jpg) no-repeat top center/cover fixed, #fff;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.toolbar-background {
+    background: transparent;
+}
+
+.card {
+    
+    margin: 0 auto;
+
+    .header {
+        height: 200px;
+
+        .avatar {
+            width: 160px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                bottom: calc(-1*(100px + 4px));
+                border: 8px solid #9Dc912;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+
+.card-body {
+    background-color: transparent;
+    padding: 30px;
+    height: calc(100vh – (200px + 56px));
+    overflow: hidden;
+
+    .user-meta {
+        padding-top: 40px;
+        margin-bottom: 20px;
+
+        .playername {
+            font-size: 24px;
+            font-weight: 600;
+            color: #303940;
+        }
+
+        .country {
+            font-size: 90%;
+            color: #949ea6;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+    }
+}
+.box {
+    background: white;
+    width:100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top:10px;
+    
+    .info{
+        font-weight: bold;
+    }
+}
+
+
+.labelicon{
+    line-height: 0;
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}

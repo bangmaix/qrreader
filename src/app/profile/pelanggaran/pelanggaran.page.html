@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>pelanggaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div class="container" *ngIf="!isLoading">
+  
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Pilih Jenis Pelanggaran</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+        <ion-list lines="none" *ngFor="let item of jenis_pelanggaran; let i = index">
+        
+          <ion-item>
+            <ion-label>{{item.jenis_pelanggaran}}</ion-label>
+            <ion-checkbox slot="start" value="{{item.id}}" [ngModel]="checkedIdx == item.id" (ngModelChange)="$event ? checkedIdx = item.id : checkedIdx = -1" [disabled]="checkedIdx > 0 && checkedIdx != item.id"></ion-checkbox>
+          </ion-item>
+        
+        </ion-list>
+   
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="simpanPelanggaran()" expand="block" color="success" shape="round">
+    Simpan
+  </ion-button>
+
+</div>
+  
+
+</ion-content>

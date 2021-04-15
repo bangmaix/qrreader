@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container" *ngIf="!isLoading">
+
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+          <img *ngIf="data_profil.photo" src="{{data_profil.photo}}" alt="" style="width: 150px; height: 150px;">
+           <img *ngIf="data_profil.photo == null"  src="assets/user.jpg" alt=""> 
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="user-meta ion-text-center">
+        <h3 class="playername">{{data_profil.nama}}</h3>
+        <h5 class="country">{{data_profil.nik}}</h5>
+      </div>
+    </div>
+
+    <ion-list lines="none">
+      <ion-item-divider color="light">Aksi</ion-item-divider>
+      <ion-item color="danger" button [routerLink] = "['pelanggaran', data_profil.id]">
+        <ion-icon name="add" slot="start"></ion-icon>
+        Input Pelanggaran
+      </ion-item>
+
+      <ion-item-divider color="light" style="margin-top:20px;">Menu</ion-item-divider>
+      <ion-item>
+        <div class="menu1 menu">
+          <ion-button color="success" [routerLink]="['detail-profile', data_profil.qris_value]"><ion-icon name="person"></ion-icon></ion-button>
+          <p>Profile</p>
+        </div>
+
+        <div class="menu2 menu" style="margin-left: 10px;">
+          <ion-button color="danger" [routerLink]="['list-pelanggaran', data_profil.id]">
+            <ion-icon name="list"></ion-icon>
+          </ion-button>
+          <p>Pelanggaran</p>
+        </div>
+        
+      </ion-item>
+    </ion-list>
+    
+  </div>
+</ion-content>
