@@ -29,16 +29,16 @@ export class HomePage implements OnInit {
 
     this.directToProfile('00020101021126660020ID.CO.BANKNAGARI.WWW011893600118110406001802091040600180303UMI51440014ID.CO.QRIS.WWW0215ID10210677478110303UMI5204763153033605802ID5911DINA ARLOJI6011BUKITTINGGI61052612462070703A0163044391')
    
-    // const options = {
-    //   prompt: 'Tempatkan QrCode di dalam kotak untuk melakukan scan dengan tepat'
-    // }
+    const options = {
+      prompt: 'Tempatkan QrCode di dalam kotak untuk melakukan scan dengan tepat'
+    }
 
-    // this.barcodeScanner.scan(options).then(
-    //   barcodeData => {
-    //     this.scannedCode = barcodeData.text;
-    //     this.directToProfile(this.scannedCode);
-    //   }
-    // );
+    this.barcodeScanner.scan(options).then(
+      barcodeData => {
+        this.scannedCode = barcodeData.text;
+        this.directToProfile(this.scannedCode);
+      }
+    );
 
   }
 
